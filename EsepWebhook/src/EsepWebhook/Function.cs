@@ -5,17 +5,17 @@ using System.Text; // for Encoding
 // Assembly attribute to enable the Lambda function's JSON input to be converted into a .NET class.
 [assembly: LambdaSerializer(typeof(Amazon.Lambda.Serialization.SystemTextJson.DefaultLambdaJsonSerializer))]
 
-namespace EsepWebhook;
+namespace EsepWebhook{
 
 public class Function
 {
     
     // / <summary>
-    // / A simple function that takes a string and does a ToUpper
-    // / </summary>
+    //v/ A simple function that takes a string and does a ToUpper
+    //v/ </summary>
     // / <param name="input"></param>
     // / <param name="context"></param>
-    // / <returns></returns>
+    // / <returns>FunctionHandler()</returns>
     var SLACK_URL = "https://hooks.slack.com/services/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"
 
     
@@ -38,5 +38,8 @@ public class Function
         //return input.ToUpper();
     }
 
-    FunctionHandler();
+}
+
+    Function func = new Function();
+    func.FunctionHandler();
 }
