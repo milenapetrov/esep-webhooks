@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "/Users/milenapetrovic/esep-webhooks/EsepWebhook/src/EsepWebhook/EsepWebhook.csproj": {}
+    "/Users/milenapetrovic/Downloads/esep-webhooks/EsepWebhook/src/EsepWebhook/EsepWebhook.csproj": {}
   },
   "projects": {
-    "/Users/milenapetrovic/esep-webhooks/EsepWebhook/src/EsepWebhook/EsepWebhook.csproj": {
+    "/Users/milenapetrovic/Downloads/esep-webhooks/EsepWebhook/src/EsepWebhook/EsepWebhook.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/milenapetrovic/esep-webhooks/EsepWebhook/src/EsepWebhook/EsepWebhook.csproj",
+        "projectUniqueName": "/Users/milenapetrovic/Downloads/esep-webhooks/EsepWebhook/src/EsepWebhook/EsepWebhook.csproj",
         "projectName": "EsepWebhook",
-        "projectPath": "/Users/milenapetrovic/esep-webhooks/EsepWebhook/src/EsepWebhook/EsepWebhook.csproj",
+        "projectPath": "/Users/milenapetrovic/Downloads/esep-webhooks/EsepWebhook/src/EsepWebhook/EsepWebhook.csproj",
         "packagesPath": "/Users/milenapetrovic/.nuget/packages/",
-        "outputPath": "/Users/milenapetrovic/esep-webhooks/EsepWebhook/src/EsepWebhook/obj/",
+        "outputPath": "/Users/milenapetrovic/Downloads/esep-webhooks/EsepWebhook/src/EsepWebhook/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/Users/milenapetrovic/.nuget/NuGet/NuGet.Config"
