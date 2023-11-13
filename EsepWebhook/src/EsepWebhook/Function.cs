@@ -1,31 +1,30 @@
+using System.Text;
 using Amazon.Lambda.Core;
-using Newtonsoft.Json; // for JsonConvert
-using System.Text; // for Encoding
+using Newtonsoft.Json;
 
 // Assembly attribute to enable the Lambda function's JSON input to be converted into a .NET class.
 [assembly: LambdaSerializer(typeof(Amazon.Lambda.Serialization.SystemTextJson.DefaultLambdaJsonSerializer))]
 
-namespace EsepWebhook{
+namespace EsepWebhook;
 
 public class Function
 {
     
-    // / <summary>
-    //v/ A simple function that takes a string and does a ToUpper
-    //v/ </summary>
-    // / <param name="input"></param>
-    // / <param name="context"></param>
-    // / <returns>FunctionHandler()</returns>
-
+    /// <summary>
+    /// A simple function that takes a string and does a ToUpper
+    /// </summary>
+    /// <param name="input"></param>
+    /// <param name="context"></param>
+    /// <returns></returns>
     
-    public string FunctionHandler(string input, ILambdaContext context)
+    public string FunctionHandler(object input, ILambdaContext context)
     {
         dynamic json = JsonConvert.DeserializeObject<dynamic>(input.ToString());
         
         string payload = $"{{'text':'Issue Created: {json.issue.html_url}'}}";
         
         var client = new HttpClient();
-        var webRequest = new HttpRequestMessage(HttpMethod.Post, Environment.GetEnvironmentVariable("SLACK_URL")) 
+        var webRequest = new HttpRequestMessage(HttpMethod.Post, Environment.GetEnvironmentVariable("SLACK_URL"))
         {
             Content = new StringContent(payload, Encoding.UTF8, "application/json")
         };
@@ -34,13 +33,10 @@ public class Function
         using var reader = new StreamReader(response.Content.ReadAsStream());
             
         return reader.ReadToEnd();
-        //return input.ToUpper();
     }
-
 }
-    static void Main(string[] args)
-        {
-            Function func = new Function();
-            func.FunctionHandler();
-        }
-}
+    // static void Main(string[] args)
+    //     {
+    //         Function func = new Function();
+    //         func.FunctionHandler();
+    //     }
