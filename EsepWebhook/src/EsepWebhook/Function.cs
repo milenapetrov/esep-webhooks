@@ -26,7 +26,7 @@ public class Function
         string payload = $"{{'text':'Issue Created: {json.issue.html_url}'}}";
         
         var client = new HttpClient();
-        var webRequest = new HttpRequestMessage(HttpMethod.Post, Environment.GetEnvironmentVariable(SLACK_URL)) //"SLACK_URL"
+        var webRequest = new HttpRequestMessage(HttpMethod.Post, Environment.GetEnvironmentVariable("SLACK_URL")) //"SLACK_URL"
         {
             Content = new StringContent(payload, Encoding.UTF8, "application/json")
         };
