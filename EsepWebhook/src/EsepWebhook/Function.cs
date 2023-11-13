@@ -39,7 +39,9 @@ public class Function
     }
 
 }
-
-    Function func = new Function();
-    func.FunctionHandler();
+    static void Main(string[] args)
+        {
+            Function func = new Function();
+            func.FunctionHandler();
+        }
 }
