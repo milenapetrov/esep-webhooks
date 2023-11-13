@@ -16,7 +16,7 @@ public class Function
     // / <param name="input"></param>
     // / <param name="context"></param>
     // / <returns></returns>
-    var SLACK_URL = "https://hooks.slack.com/services/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"
+    var SLACK_URL = "https://hooks.slack.com/services/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"
 
     
     public string FunctionHandler(string input, ILambdaContext context)
@@ -37,4 +37,6 @@ public class Function
         return reader.ReadToEnd();
         //return input.ToUpper();
     }
+
+    FunctionHandler();
 }
